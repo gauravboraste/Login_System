@@ -1,0 +1,39 @@
+{% include 'navbar.html' %}
+
+{% block content %}
+ <form method="POST" >
+    {% csrf_token %}
+    <div style="margin-left: 350px;margin-right: 420px; margin-top: 50px;">
+        <div class="mb-3">
+          <legend>Login</legend>
+          <br>
+          <br>
+          <label for="exampleInputUsername" class="form-label"> Username</label>
+          <input type="text" class="form-control" name="username" >
+          
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control"  name="password">
+        </div>
+        
+        <button type="submit" value="Login" class="btn btn-primary">Login</button>
+
+         <br>
+          <br>
+         <p class="change_link">  
+         <div style="text-align: center; margin-left: 30px; margin-top: 20px;">
+  <div class="text-center" >
+                                <a class="small" href="#">Forgot Password?</a>
+                            </div>
+                            <br>
+                            <div class="text-center">
+                                <a class="small" href="{% url 'signup' %}"> If you Don't have Registation? Register!</a>
+                            </div>
+                        </div>
+           
+         
+      </div>
+      </form>
+{% endblock content %}

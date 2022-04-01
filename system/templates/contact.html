@@ -1,0 +1,38 @@
+{% include 'navbar.html' %}
+  
+  
+    {% block content %}
+
+   
+  <form method="POST" >
+    {% csrf_token %}
+    <div style="margin-left: 350px;margin-right: 420px; margin-top: 50px;">
+        <div class="mb-3">
+          <legend>ContectUs</legend>
+          <br>
+          <br>
+          <label for="exampleInputUsername" class="form-label"> Name</label>
+          <input type="text" class="form-control" name="name" >
+          
+          
+        </div>
+        <div class="mb-3">
+          
+          <label for="exampleInputUsername" class="form-label"> Email</label>
+          <input type="text" class="form-control" name="email" >
+          
+          
+        </div>
+        <div class="mb-3">
+          
+          <label for="exampleInputUsername" class="form-label"> Message</label>
+          <textarea  class="form-control" name="message" cols="30"></textarea>
+          
+          
+        </div>
+        <button type="submit" value="Contect" class="btn btn-primary">Submit</button>
+           
+         
+      </div>
+      </form>
+    {% endblock content %}
